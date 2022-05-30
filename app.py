@@ -36,13 +36,14 @@ def genraxAPI_says():
 
         resp = {
             'message': 'File successfully uploaded',
-            'status code': 201
+            'status code': 200
         }
 
         resp["label"] = predict.predict(FILE_PATH=uploaded_file, MODEL_PATH=MODEL_PATH, SHAPE=SHAPE)
         resp = jsonify(resp)
 
-        os.remove(uploaded_file)
+        print(uploaded_file)
+        
 
         return resp
 
@@ -60,5 +61,5 @@ def main():
 
 
 if __name__ == '__main__':
-    app.run(port=80, debug=False)
+    app.run(host='0.0.0.0', port=80, debug=False)
 
