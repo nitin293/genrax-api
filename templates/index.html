@@ -1,38 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GenraxAPI</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Genrax.API</title>
+	<link rel="stylesheet" href="static/css/style.css">
 </head>
 
-<style>
-    body{        
-        text-align: center;
-        font-size: 1rem;
-        font-color: white;
-    }
-
-</style>
 
 <body>
 
-    <h1>
-        GenraxAPI - v.0.3
-    </h1>
+	<!-- partial:index.partial.html -->
+	<div class="form-structor">
 
-    <form action="file-upload" method="POST" enctype="multipart/form-data">
-        <input type="file" id="file" name="file" >
-        <input type="submit">
-    </form>
+		<div class="nameplate">
+			<span class="main">Genrax.API</span>
+			<span class="version">v.1.4</span>
+		</div>
 
-    <br><b>OR</b><br>
+		<div class="upload">
+			<h2 class="form-title" id="signup"><span>or</span>Upload</h2>
 
-    <form action="url-upload" method="POST">
-        <input type="url" id="url" name="url">
-        <input type="submit">
-    </form>
+			<form action="file-upload" method="post" enctype="multipart/form-data">
+				<div class="form-holder">
+					<div class="wrapper">
+						<div class="file-upload">
+						  <input type="file" name="file"/>
+						  <span>Upload File</span>
+						</div>
+					</div>
+				</div>
+				<button class="submit-btn">Submit</button>
+			</form>
 
+		</div>
+
+
+		<div class="url slide-up">
+			<div class="center">
+				<h2 class="form-title" id="login"><span>or</span>URL</h2>
+
+				<form action="url-upload" method="post">
+					<div class="form-holder">
+						<input type="url" name="url" class="input" placeholder="Music URL" required=""/>
+					</div>
+					<button class="submit-btn">Submit</button>
+				</form>
+
+
+			</div>
+		</div>
+
+
+
+	</div>
+	<!-- partial -->
+  	<script  src="static/js/script.js"></script>
 
 </body>
 </html>
