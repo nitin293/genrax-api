@@ -9,7 +9,7 @@
 <style>
     body{        
         text-align: center;
-        font-size: 2rem;
+        font-size: 1rem;
         font-color: white;
     }
 
@@ -20,8 +20,16 @@
     <h1>
         GenraxAPI - v.0.3
     </h1>
+
     <form action="file-upload" method="POST" enctype="multipart/form-data">
         <input type="file" id="file" name="file" >
+        <input type="submit">
+    </form>
+
+    <br><b>OR</b><br>
+
+    <form action="url-upload" method="POST">
+        <input type="url" id="url" name="url">
         <input type="submit">
     </form>
 
